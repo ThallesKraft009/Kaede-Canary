@@ -1,0 +1,23 @@
+{
+  "name": "Kaede Bot",
+  "version": "10.5.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThallesKraft009/Kaede-Bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThallesKraft009/Kaede-Bot/issues"
+  },
+  "homepage": "https://github.com/ThallesKraft009/Kaede-Bot#readme",
+  "dependencies": {
+    "websocket": "^1.0.34"
+  }
+}
