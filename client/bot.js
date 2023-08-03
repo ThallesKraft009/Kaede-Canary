@@ -1,5 +1,6 @@
 const WebSocket = require('websocket').w3cwebsocket;
 const c = require("colors");
+const { Command_Manager } = require("./commands.js");
 
 module.exports = class KaedeBot {
   constructor(token, intents ) {
@@ -94,13 +95,15 @@ module.exports = class KaedeBot {
   }, 5000)
   }
 
-  event() {
+  events() {
     this.ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
 
       if (data.op === 0) {
       const { t, d } = data;
       let evento = t;
+
+      Command_Manager(evento, d, this.token, this.ws);
     
   }
     };
