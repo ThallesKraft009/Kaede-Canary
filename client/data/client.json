@@ -1,0 +1,41 @@
+{
+  "v": 9,
+  "user_settings": {},
+  "user": {
+    "verified": true,
+    "username": "Kaede Canary",
+    "mfa_enabled": true,
+    "id": "1134858809563676783",
+    "global_name": null,
+    "flags": 0,
+    "email": null,
+    "discriminator": "3344",
+    "bot": true,
+    "avatar": "3cc27c9ce2ecb7450db5ab82c2e94eef"
+  },
+  "session_type": "normal",
+  "session_id": null,
+  "resume_gateway_url": "wss://gateway-us-east1-d.discord.gg",
+  "relationships": [],
+  "private_channels": [],
+  "presences": [],
+  "guilds": [
+    {
+      "unavailable": true,
+      "id": "1134057488518500374"
+    }
+  ],
+  "guild_join_requests": [],
+  "geo_ordered_rtc_regions": [
+    "seattle",
+    "santa-clara",
+    "us-west",
+    "us-south",
+    "us-central"
+  ],
+  "application": {
+    "id": "1134858809563676783",
+    "flags": 25731072
+  },
+  "_trace": null
+}

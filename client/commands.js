@@ -13,7 +13,7 @@ async function Command_Manager(event, data, token, ws){
   Avatar.run();
 
   ////////////////////////////////////////////
-  let AtmCommand = require("./Commands/Econony/atm.js");
+  let AtmCommand = require("./Commands/Economy/atm.js");
 
   let Atm = new AtmCommand(event, data, token)
   Atm.run();

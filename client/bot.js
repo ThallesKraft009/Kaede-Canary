@@ -2,7 +2,7 @@ const WebSocket = require('websocket').w3cwebsocket;
 const c = require("colors");
 const { Command_Manager } = require("./commands.js");
 const { connect } = require("mongoose");
-
+const JSONWriter = require("./Utils/JsonWrite.js")
 module.exports = class KaedeBot {
   constructor(token, intents, mongo_url) {
     this.token = token;
@@ -106,12 +106,22 @@ module.exports = class KaedeBot {
       let evento = t;
         
       Command_Manager(evento, d, this.token, this.ws);
+        //console.log(evento, d)
 
       if (evento === "READY"){
+
+       // console.log(d)
+
+      d.session_id = null;
+      d._trace = null;
+
+  let jsonWriter = new JSONWriter('client/data/client.json');
+jsonWriter.writeData(d);
 
   console.log(c.green("Kaede está on-line."))
         connect(this.mongo_url)
       }
+
     
   }
     };
