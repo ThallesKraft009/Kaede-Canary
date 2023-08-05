@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ThallesKraft009/Kaede-Bot#readme",
   "dependencies": {
     "colors": "^1.4.0",
+    "mongoose": "^7.4.2",
     "websocket": "^1.0.34"
   }
 }

@@ -1,11 +1,13 @@
 const WebSocket = require('websocket').w3cwebsocket;
 const c = require("colors");
 const { Command_Manager } = require("./commands.js");
+const { connect } = require("mongoose");
 
 module.exports = class KaedeBot {
-  constructor(token, intents ) {
+  constructor(token, intents, mongo_url) {
     this.token = token;
     this.intents = intents;
+    this.mongo_url = mongo_url;
     this.payload = {
       op: 2,
       d: {
@@ -102,8 +104,14 @@ module.exports = class KaedeBot {
       if (data.op === 0) {
       const { t, d } = data;
       let evento = t;
-
+        
       Command_Manager(evento, d, this.token, this.ws);
+
+      if (evento === "READY"){
+
+  console.log(c.green("Kaede está on-line."))
+        connect(this.mongo_url)
+      }
     
   }
     };

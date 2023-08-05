@@ -6,7 +6,17 @@ async function Command_Manager(event, data, token, ws){
   let Ping = new PingCommand(event, data, token, ws)
   Ping.run();
 
-  
+  ///////////////////////////////////////////
+  let AvatarCommand = require("./Commands/Info/avatar.js");
+
+  let Avatar = new AvatarCommand(event, data, token)
+  Avatar.run();
+
+  ////////////////////////////////////////////
+  let AtmCommand = require("./Commands/Econony/atm.js");
+
+  let Atm = new AtmCommand(event, data, token)
+  Atm.run();
 }
 
 
