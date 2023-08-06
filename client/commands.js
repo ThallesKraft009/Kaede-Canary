@@ -17,6 +17,11 @@ async function Command_Manager(event, data, token, ws){
 
   let Atm = new AtmCommand(event, data, token)
   Atm.run();
+
+  let DailyCommand = require("./Commands/Economy/daily.js");
+
+  let daily = new DailyCommand(event, data, token)
+  daily.run();
 }
 
 
